@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import proyecto1.bean.Libro;
@@ -74,7 +75,7 @@ public class BaseDatos2 {
 	public Libro getLibro(int id) {
 		Libro libro = null;
 		try {
-			java.sql.Statement s = conexion.createStatement();
+			Statement s = conexion.createStatement();
 			String sql = "SELECT * FROM LIBROS WHERE ID="+id;
 			s.execute(sql);
 			ResultSet rs = s.getResultSet();
@@ -89,7 +90,7 @@ public class BaseDatos2 {
 	public ArrayList<Libro> getLibros(){
 		ArrayList<Libro> lista = new ArrayList<Libro>();
 		try {
-			java.sql.Statement s = conexion.createStatement();
+			Statement s = conexion.createStatement();
 			String sql = "SELECT * FROM LIBROS";
 			s.execute(sql);
 			ResultSet rs = s.getResultSet();
@@ -106,7 +107,7 @@ public class BaseDatos2 {
 	public boolean compruebaUsuario(String usuario, String password) {
 		boolean check = false;
 		try {
-			java.sql.Statement s = conexion.createStatement();
+			Statement s = conexion.createStatement();
 			String sql = "SELECT count(*) FROM USUARIOS WHERE usuario='" + usuario + "'" + "and password='"+ password + "'";
 			s.execute(sql);
 			ResultSet rs = s.getResultSet();
