@@ -15,6 +15,7 @@ import proyecto1.bean.Usuario;
 import proyecto1.repository.BaseDatos;
 import proyecto1.repository.BaseDatos2;
 import proyecto1.repository.BaseDatos3;
+import proyecto1.service.BaseDatos3Service;
 
 import org.springframework.ui.Model;
 
@@ -23,11 +24,11 @@ import org.springframework.ui.Model;
 public class controlador {
 
 //	Base Datos db = new Basedatos();
-//	Usuario usuario;
+	Usuario usuario;
 //	BaseDatos2 bd = new BaseDatos2();
 
 	@Autowired
-	BaseDatos3 bd;
+	BaseDatos3Service bd;
 
 
 	@GetMapping("/")
@@ -86,7 +87,7 @@ public class controlador {
 
 	@PostMapping("/modificar")
 	public String modificar2(Libro libro, Model model) {
-		bd.modifica(libro);
+		bd.modificar(libro);
 		ArrayList<Libro> libros = bd.getLibros();
 		model.addAttribute("usuario", this.usuario);
 		model.addAttribute("libros", libros);

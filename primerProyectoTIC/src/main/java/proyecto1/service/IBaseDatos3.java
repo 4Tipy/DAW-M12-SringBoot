@@ -1,4 +1,4 @@
-package proyecto1.java;
+package proyecto1.service;
 
 import java.util.ArrayList;
 
