@@ -23,6 +23,9 @@ public class Libro {
 	private String editorial;
 	private String fecha;
 	private String tematica;
+	
+	   public Libro() {
+	    }
 
 	public int getId() {
 		return id;
