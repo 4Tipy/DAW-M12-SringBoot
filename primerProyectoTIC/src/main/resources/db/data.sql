@@ -12,4 +12,3 @@ INSERT INTO libros (id, titulo, autor, editorial, fecha, tematica) VALUES
 
 
 INSERT INTO usuarios (id, usuario, password) VALUES (1, 'admin', '456'), (2, 'itic', 'itic');
-

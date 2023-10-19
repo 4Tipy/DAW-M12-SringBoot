@@ -25,10 +25,10 @@ public class controlador {
 
 //	Base Datos db = new Basedatos();
 	Usuario usuario;
-//	BaseDatos2 bd = new BaseDatos2();
+	BaseDatos2 bd = new BaseDatos2();
 
-	@Autowired
-	BaseDatos3Service bd;
+//	@Autowired
+//	BaseDatos3Service bd;
 
 
 	@GetMapping("/")
@@ -87,7 +87,7 @@ public class controlador {
 
 	@PostMapping("/modificar")
 	public String modificar2(Libro libro, Model model) {
-		bd.modificar(libro);
+		bd.modifica(libro);
 		ArrayList<Libro> libros = bd.getLibros();
 		model.addAttribute("usuario", this.usuario);
 		model.addAttribute("libros", libros);
