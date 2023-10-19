@@ -11,4 +11,4 @@ INSERT INTO libros (id, titulo, autor, editorial, fecha, tematica) VALUES
 (10, '1984', 'George Orwell', 'Secker & Warburg', '1949-06-08', 'Ciencia ficción');
 
 
-INSERT INTO usuarios (id, usuario, password) VALUES (1, 'admin', '456'), (2, 'itic', 'itic');
+INSERT INTO usuarios (id, usuario, password) VALUES (1, 'admin', '456'), (2, 'itic', 'itic' );
